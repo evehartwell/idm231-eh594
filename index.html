@@ -10,7 +10,7 @@
     <header>
         <h1>What Brand Are You?</h1>
     </header>
-    
+
     <div class="container">
         <ul class="slideshow">
             <li class="slide">
@@ -64,9 +64,19 @@
         </ul>
     </div>
 
-    <form action="">
-        <label for="bday">Enter Your Birthday</label><br>
-        <input type="text" id="bday" name="bday"><br>
-    </form>
+    <section>
+        <form>
+            <div class="control">
+                <label for="birthday">Enter your birthday</label>
+                <input type="date" name="birthday" required />
+            </div>
+            <div class="control">
+                <button type="submit">Submit</button>
+            </div>
+            <ul class="errors" hidden></ul>
+        </form>
+    </section>
 </body>
+<script src="index.js"></script>
+
 </html>
