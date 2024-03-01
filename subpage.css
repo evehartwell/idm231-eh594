@@ -1,0 +1,18 @@
+:root {
+    margin: 0;
+    padding: 0;
+    --main-bg-color: #000;
+    --body-font: #FFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "";
+    color: var(--body-font);
+    background-color: var(--main-bg-color);
+    text-transform: uppercase;
+    margin: 0;
+}
