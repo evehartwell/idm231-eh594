@@ -16,3 +16,36 @@ body {
     text-transform: uppercase;
     margin: 0;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; 
+    height: 100vh;
+}
+
+.grid-item {
+    
+}
+
+#text {
+    padding: 4rem;
+    
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 120rem;
+}
+
+.photo {
+    flex: 1; /* images fill the available space evenly */
+    margin: 0; 
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+.back-button {
+    margin: 1rem;
+}
