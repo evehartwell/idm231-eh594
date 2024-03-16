@@ -19,7 +19,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; 
+    grid-template-columns: 1fr 1fr; 
     height: 100vh;
 }
 
@@ -33,10 +33,15 @@ body {
 }
 
 #gallery {
+    max-height: 100vh;
+    overflow: scroll;
+}  
+
+.gallery-content {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    height: 120rem;
+    flex-direction: column; 
+    height: 120rem;  
 }
 
 .photo {
