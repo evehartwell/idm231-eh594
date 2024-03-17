@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     --main-bg-color: #000;
-    --body-font: #FFF;
+    --body-font-color: #FFF;
+    --body-font:
+    --line-height: 1.5;
 }
 
 * {
@@ -11,7 +13,7 @@
 
 body {
     font-family: "";
-    color: var(--body-font);
+    color: var(--body-font-color);
     background-color: var(--main-bg-color);
     text-transform: uppercase;
     margin: 0;
@@ -23,12 +25,29 @@ body {
     height: 100vh;
 }
 
-.grid-item {
-    
+.back-button {
+    margin: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.brand-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 #text {
-    padding: 4rem;
+    
     
 }
 
@@ -50,6 +69,16 @@ body {
     background-size: contain;
 }
 
-.back-button {
-    margin: 1rem;
+/* svg styles */
+.svg {
+    width: 10rem;
+    filter: invert(100%) sepia(1%) saturate(7430%) hue-rotate(290deg) brightness(125%) contrast(99%);
+}
+
+#zodiac {
+    width: 5rem;
+}
+
+#logo {
+    width: 20rem;
 }
