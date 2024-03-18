@@ -16,6 +16,7 @@ body {
     color: var(--body-font-color);
     background: linear-gradient(90deg, #000000 0%, #282828 55.56%);
     text-transform: uppercase;
+    overflow: hidden;
 }
 
 h3 {
