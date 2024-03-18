@@ -1,3 +1,20 @@
+/* image selection overlay */
+
+var image = document.getElementsByClassName('grid-item');
+for (var i = 0; i < image.length; i++) {
+    image[i].addEventListener('mouseover', mouseOverEffect);
+    image[i].addEventListener('mouseout', mouseOutEffect);
+}
+
+function mouseOverEffect() {
+    this.classList.add("image-selector");
+}
+function mouseOutEffect() {
+    this.classList.remove("image-selector");
+}
+
+/* birthday form */
+
 const form = document.querySelector('form');
 const error_list = document.querySelector('.errors');
 
@@ -60,4 +77,13 @@ function handle_submit(event) {
 
 if (form) {
     form.addEventListener('submit', handle_submit, false);
+}
+
+/* show page accessibility info */
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
 }

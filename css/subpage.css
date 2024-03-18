@@ -3,8 +3,8 @@
     padding: 0;
     --main-bg-color: #000;
     --body-font-color: #FFF;
-    --body-font:
-    --line-height: 1.5;
+    --main-font: Inter, sans-serif;
+    line-height: 1.5;
 }
 
 * {
