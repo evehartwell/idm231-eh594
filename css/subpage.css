@@ -14,7 +14,7 @@
 body {
     font-family: var(--main-font);
     color: var(--body-font-color);
-    background: linear-gradient(90deg, #000000 0%, #282828 55.56%);
+    /*background: linear-gradient(90deg, #000000 0%, #282828 55.56%);*/
     text-transform: uppercase;
     overflow: hidden;
 }
@@ -125,4 +125,54 @@ a:hover {
 
 #logo {
     width: 20rem;
+}
+
+/* individual subpage background colors */
+
+.aries-bg {
+    background: linear-gradient(90deg, #230b26 0%, #282828 55.56%); 
+}
+
+.taurus-bg {
+    background: linear-gradient(90deg, #8f777e 0%, #231a1a 55.56%); 
+}
+
+.gemini-bg {
+    background: linear-gradient(90deg, #3a0a22 0%, #282828 55.56%); 
+}
+
+.cancer-bg {
+    background: linear-gradient(90deg, #1f1100 0%, #42342a 55.56%); 
+}
+
+.leo-bg {
+    background: linear-gradient(90deg, #62374a 0%, #282828 55.56%); 
+}
+
+.virgo-bg {
+    background: linear-gradient(90deg, #757575 0%, #282828 55.56%); 
+}
+
+.libra-bg {
+    background: linear-gradient(90deg, #737241 0%, #282828 55.56%); 
+}
+
+.scorpio-bg {
+    background: linear-gradient(90deg, #000000 0%, #282828 55.56%); 
+}
+
+.sag-bg {
+    background: linear-gradient(90deg, #a09b9b 0%, #2f2b23 55.56%); 
+}
+
+.cap-bg {
+    background: linear-gradient(90deg, #122009 0%, #272626 55.56%); 
+}
+
+.aqua-bg {
+    background: linear-gradient(90deg, #140527 0%, #282828 55.56%); 
+}
+
+.pisces-bg {
+    background: linear-gradient(90deg, #040b21 0%, #282828 55.56%); 
 }
