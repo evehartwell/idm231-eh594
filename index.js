@@ -1,4 +1,4 @@
-/* image selection overlay */
+// image selection overlay
 
 var image = document.getElementsByClassName('grid-item');
 for (var i = 0; i < image.length; i++) {
@@ -13,7 +13,7 @@ function mouseOutEffect() {
     this.classList.remove("image-selector");
 }
 
-/* birthday form */
+// birthday form
 
 const form = document.querySelector('form');
 const error_list = document.querySelector('.errors');
@@ -38,7 +38,7 @@ function log_birthday(birthday) {
  *
  * @param {number} month 
  * @param {number} day 
- * @return {string} -> zodiac sign
+ * @return {string} - zodiac sign
  */
 function getZodiacSign(month, day) {
     if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
@@ -118,7 +118,7 @@ if (form) {
     form.addEventListener('submit', handle_submit, false);
 }
 
-/* show page accessibility info */
+// show page accessibility info 
 function on() {
     document.getElementById("overlay").style.display = "block";
 }

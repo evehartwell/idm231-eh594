@@ -1,4 +1,4 @@
-/* expand gallery image when clicked */
+// expand gallery image when clicked 
 const photos = document.querySelectorAll('.photo');
 
 photos.forEach(photo => {
@@ -7,4 +7,11 @@ photos.forEach(photo => {
     });
 });
 
+// play sound clip 
+document.addEventListener("DOMContentLoaded", function() {
+    // Get audio element
+    const audio = document.getElementById("soundClip");
 
+    // Play sound
+    audio.play();
+});
