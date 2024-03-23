@@ -9,14 +9,17 @@
 
 * {
     box-sizing: border-box;
+    padding: 0;
 }
 
 body {
     font-family: var(--main-font);
     color: var(--body-font-color);
-    /*background: linear-gradient(90deg, #000000 0%, #282828 55.56%);*/
+    /*background: linear-gradient(90deg, #000000 0%, #282828 70%);*/
     text-transform: uppercase;
     overflow: hidden;
+    scrollbar-color: hsla(0, 0%, 100%, 0.5) rgba(255, 255, 255, 0);
+    scrollbar-width: thin;
 }
 
 h3 {
@@ -43,7 +46,6 @@ a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1.5fr; 
-    height: 100vh;
 }
 
 .back-button {
@@ -61,7 +63,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     padding: 6rem;
 }
 
@@ -80,12 +82,10 @@ a:hover {
 
 .gallery-content {
     display: flex;
-    flex-direction: column; 
-    height: 120rem;  
+    flex-direction: column;  
 }
 
 .photo {
-    flex: 1; /* images fill the available space evenly */
     background-repeat: repeat-x;
     background-size: contain;
     cursor: pointer;
@@ -127,52 +127,177 @@ a:hover {
     width: 20rem;
 }
 
+/* media screens */
+@media screen and (min-width: 360px) {
+    .grid-container {
+        grid-template-rows: 28% 44%;
+        grid-template-columns: auto;
+    }
+
+    .brand-header {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .portrait {
+        min-height: 400px;
+    }
+
+    .landscape {
+        min-height: 220px;
+    }
+
+    #description {
+        padding: 2.5rem;
+        max-height: 25rem;
+    }
+
+    #text {
+        overflow-y: scroll;
+    }
+
+    #gallery {
+        max-height: 110vh;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
+    #zodiac {
+        width: 2rem;
+    }
+
+    #logo {
+        width: 14rem;
+    }
+
+    .back-button {
+        width: 2rem;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .grid-container {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .brand-header {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    #description {
+        justify-content: center;
+        padding: 3rem;
+        max-height: none;
+        overflow: hidden;
+    }
+
+    #text {
+        overflow: hidden;
+    }
+
+    #gallery {
+        max-height: 100vh;
+    }
+
+    .portrait {
+        min-height: 500px;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    #zodiac {
+        width: 3rem;
+    }
+
+    .back-button {
+        width: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #description {
+        justify-content: center;
+        padding: 4rem;
+    }
+
+    .portrait {
+        min-height: 700px;
+    }
+    
+    .landscape {
+        min-height: 350px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #zodiac {
+        width: 4rem;
+    }
+
+    #logo {
+        width: 18rem;
+    }
+}
+
+
 /* individual subpage background colors */
 
 .aries-bg {
-    background: linear-gradient(90deg, #230b26 0%, #282828 55.56%); 
+    background: linear-gradient(90deg, #230b26 0%, #282828 70%); 
 }
 
 .taurus-bg {
-    background: linear-gradient(90deg, #8f777e 0%, #231a1a 55.56%); 
+    background: linear-gradient(90deg, #8f777e 0%, #231a1a 70%); 
 }
 
 .gemini-bg {
-    background: linear-gradient(90deg, #3a0a22 0%, #282828 55.56%); 
+    background: linear-gradient(90deg, #3a0a22 0%, #282828 70%); 
 }
 
 .cancer-bg {
-    background: linear-gradient(90deg, #1f1100 0%, #42342a 55.56%); 
+    background: linear-gradient(90deg, #1f1100 0%, #42342a 70%); 
 }
 
 .leo-bg {
-    background: linear-gradient(90deg, #62374a 0%, #414141 55.56%); 
+    background: linear-gradient(90deg, #62374a 0%, #414141 70%); 
 }
 
 .virgo-bg {
-    background: linear-gradient(90deg, #757575 0%, #282828 55.56%); 
+    background: linear-gradient(90deg, #757575 0%, #282828 70%); 
 }
 
 .libra-bg {
-    background: linear-gradient(90deg, #999869 0%, #282828 55.56%); 
+    background: linear-gradient(90deg, #999869 0%, #282828 70%); 
 }
 
 .scorpio-bg {
-    background: linear-gradient(90deg, #000000 0%, #282828 55.56%); 
+    background: linear-gradient(90deg, #000000 0%, #282828 70%); 
 }
 
 .sag-bg {
-    background: linear-gradient(90deg, #a09b9b 0%, #2f2b23 55.56%); 
+    background: linear-gradient(90deg, #a09b9b 0%, #2f2b23 70%); 
 }
 
 .cap-bg {
-    background: linear-gradient(90deg, #122009 0%, #272626 55.56%); 
+    background: linear-gradient(90deg, #122009 0%, #272626 70%); 
 }
 
 .aqua-bg {
-    background: linear-gradient(90deg, #140527 0%, #282828 55.56%); 
+    background: linear-gradient(90deg, #140527 0%, #282828 70%); 
 }
 
 .pisces-bg {
-    background: linear-gradient(90deg, #040b21 0%, #282828 55.56%); 
+    background: linear-gradient(90deg, #040b21 0%, #282828 70%); 
 }

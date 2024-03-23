@@ -9,6 +9,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -17,6 +19,7 @@ body {
     background-color: var(--main-bg-color);
     text-transform: uppercase;
     margin: 0;
+    overflow: hidden;
 }
 
 h1 {
@@ -50,17 +53,17 @@ header {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 20px), 1fr));
-    gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
-    max-width: 1200px; 
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem;
+    padding-top: 0;
     margin: 0 auto;
+    max-width: 1400px;
 }
 
 .grid-item {
     display: block;
     overflow: hidden;
-    background-color: #333;
     border-radius: 20px;
     position: relative;
     padding-top: 55%;
@@ -93,10 +96,13 @@ header {
 }
 
 section {
+    position: sticky;
+    background-color: #000;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    bottom: 0;
 }
 
 form {
@@ -109,7 +115,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     gap: 1rem;
 }
 
@@ -124,7 +130,6 @@ input {
     text-align: center;
     text-transform: uppercase;
 }
-
 
 ::placeholder {
     color: #333;
@@ -169,12 +174,13 @@ a {
 }
 
 .help-btn {
-    margin: 3rem;
-    position: absolute;
+    margin: 1rem;
+    position: fixed;
     right: 0;
     bottom: 0;
     background-color: transparent;
     border: none;
+    z-index: 1;
 }
 
 .help-btn:hover {
@@ -205,4 +211,61 @@ a {
     border-radius: 10px;
     width: 35rem;
     position: relative;
+}
+
+/* media screens */
+@media screen and (min-width:  360px) {
+    body {
+        overflow-y: scroll;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .grid-container {
+        padding: 5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .grid-item {
+        border-radius: 10px;
+    }
+
+    #overlay-text {
+        width: 20rem;
+        padding: 1.5rem;
+        margin: 10rem auto;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(calc(25% - 10px), 1fr));
+        gap: 20px;
+        grid-auto-rows: minmax(82px, auto);
+        margin: 0 auto;
+    }
+
+    .section {
+        position: relative;
+    }
+
+    #overlay-text {
+        width: 35rem;
+        padding: 3rem;
+        margin: 20rem auto;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(calc(20% - 10px), 1fr));
+    }
 }
